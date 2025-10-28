@@ -35,7 +35,7 @@ async def help_user(bot, update):
             text=Translation.HELP_USER,
             parse_mode="html",
             disable_web_page_preview=True,
-            reply_to_message_id=update.message_id
+            reply_to_message_id=update.id
         )
 
 
@@ -57,7 +57,7 @@ async def start(bot, update):
                     [InlineKeyboardButton("🦋 ⭑┗━━┫⦀⦙ O W N E R ⦙⦀┣━━┛⭑ 🦋", url="https://t.me/LazyDeveloperr")],
                 ]
             ),
-            reply_to_message_id=update.message_id
+            reply_to_message_id=update.id
         )
     elif update.from_user.id in Config.AUTH_USERS:
         # logger.info(update)
@@ -75,7 +75,7 @@ async def start(bot, update):
                     [InlineKeyboardButton("🦋 ⭑┗━━┫⦀⦙ O W N E R ⦙⦀┣━━┛⭑ 🦋", url="https://t.me/LazyDeveloperr")],
                 ]
             ),
-            reply_to_message_id=update.message_id
+            reply_to_message_id=update.id
         )
     else:
         # logger.info(update) ==         
@@ -91,6 +91,5 @@ async def start(bot, update):
                     [InlineKeyboardButton("⭑💢 𝚂 𝙾 𝙲 𝚒 𝙰 𝙻 💢⭑", url="https://instagram.com/LazyDeveloper__")],
                 ]
             ),
-            reply_to_message_id=update.message_id
+            reply_to_message_id=update.id
         )
-         
