@@ -178,7 +178,7 @@ async def ddl_call_back(bot, update):
                     # title=response_json["title"],
                     # reply_markup=reply_markup,
                     thumb=thumb_image_path,
-                    reply_to_message_id=update.message.reply_to_message.message_id,
+                    reply_to_message_id=update.message.reply_to_message.id,
                     progress=progress_for_pyrogram,
                     progress_args=(
                         Translation.UPLOAD_START,
@@ -196,7 +196,7 @@ async def ddl_call_back(bot, update):
                     thumb=thumb_image_path,
                     caption=description + f"\n\nSubmitted by {update.from_user.mention}\nUploaded by {mention}",
                     # reply_markup=reply_markup,
-                    reply_to_message_id=update.message.reply_to_message.message_id,
+                    reply_to_message_id=update.message.reply_to_message.id,
                     progress=progress_for_pyrogram,
                     progress_args=(
                         Translation.UPLOAD_START,
@@ -214,7 +214,7 @@ async def ddl_call_back(bot, update):
                     duration=duration,
                     length=width,
                     thumb=thumb_image_path,
-                    reply_to_message_id=update.message.reply_to_message.message_id,
+                    reply_to_message_id=update.message.reply_to_message.id,
                     progress=progress_for_pyrogram,
                     progress_args=(
                         Translation.UPLOAD_START,
@@ -237,7 +237,7 @@ async def ddl_call_back(bot, update):
                     supports_streaming=True,
                     # reply_markup=reply_markup,
                     thumb=thumb_image_path,
-                    reply_to_message_id=update.message.reply_to_message.message_id,
+                    reply_to_message_id=update.message.reply_to_message.id,
                     progress=progress_for_pyrogram,
                     progress_args=(
                         Translation.UPLOAD_START,
@@ -259,14 +259,14 @@ async def ddl_call_back(bot, update):
             await bot.edit_message_text(
                 text=Translation.AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS.format(time_taken_for_download, time_taken_for_upload),
                 chat_id=update.message.chat.id,
-                message_id=update.message.message_id,
+                message_id=update.message.id,
                 disable_web_page_preview=True
             )
     else:
         await bot.edit_message_text(
             text=Translation.NO_VOID_FORMAT_FOUND.format("Incorrect Link"),
             chat_id=update.message.chat.id,
-            message_id=update.message.message_id,
+            message_id=update.message.id,
             disable_web_page_preview=True
         )
 
