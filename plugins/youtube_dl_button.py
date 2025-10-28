@@ -56,7 +56,9 @@ async def youtube_dl_call_back(bot, update):
         )
         return False
     youtube_dl_url = update.message.reply_to_message.text
-    custom_file_name = "🎬 " + str(response_json.get("title")) + \
+    # Add emoji prefix based on file type
+    emoji_prefix = "🎬 " if youtube_dl_ext in ["mp4", "mkv", "avi", "mov", "webm"] else "🎵 "
+    custom_file_name = emoji_prefix + str(response_json.get("title")) + \
         "_" + youtube_dl_format + "." + youtube_dl_ext
     youtube_dl_username = None
     youtube_dl_password = None
@@ -103,7 +105,7 @@ async def youtube_dl_call_back(bot, update):
         message_id=update.message.id
     )
     user = await bot.get_me()
-    mention = user["mention"]
+    mention = user.mention
     description = Translation.CUSTOM_CAPTION_UL_FILE.format(mention)
     if "fulltitle" in response_json:
         description = response_json["fulltitle"][0:1021]
