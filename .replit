@@ -4,3 +4,15 @@ expertMode = true
 
 [nix]
 channel = "stable-25_05"
+
+[workflows]
+runButton = "Run Telegram Bot"
+
+[[workflows.workflow]]
+name = "Run Telegram Bot"
+author = 49024664
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python3 bot.py"
