@@ -87,7 +87,6 @@ async def echo(bot: Client, update: Message):
             command_to_exec = [
                 "yt-dlp",
                 "--no-warnings",
-                "--youtube-skip-dash-manifest",
                 "-j",
                 url,
                 "--proxy", Config.HTTP_PROXY
@@ -96,7 +95,6 @@ async def echo(bot: Client, update: Message):
             command_to_exec = [
                 "yt-dlp",
                 "--no-warnings",
-                "--youtube-skip-dash-manifest",
                 "-j",
                 url
             ]

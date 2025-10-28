@@ -1,0 +1,81 @@
+2025-10-28 09:31:48,307 - pyrogram.crypto.aes - INFO - Using TgCrypto
+2025-10-28 09:31:48,421 - asyncio - DEBUG - Using selector: EpollSelector
+2025-10-28 09:31:56,118 - plugins.youtube_dl_echo - INFO - {
+    "_": "User",
+    "id": 7623389594,
+    "is_self": false,
+    "is_contact": false,
+    "is_mutual_contact": false,
+    "is_deleted": false,
+    "is_bot": false,
+    "is_verified": false,
+    "is_restricted": false,
+    "is_scam": false,
+    "is_fake": false,
+    "is_support": false,
+    "is_premium": false,
+    "first_name": "Jack",
+    "last_name": "Sparrow 🔥",
+    "status": "UserStatus.RECENTLY",
+    "username": "Jacksparwking",
+    "language_code": "en"
+}
+2025-10-28 09:32:00,991 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): i.ytimg.com:443
+2025-10-28 09:32:01,377 - urllib3.connectionpool - DEBUG - https://i.ytimg.com:443 "GET /vi_webp/3HP-Lcsslyg/maxresdefault.webp HTTP/1.1" 200 165174
+2025-10-28 09:32:01,554 - PIL.Image - DEBUG - Importing AvifImagePlugin
+2025-10-28 09:32:01,556 - PIL.Image - DEBUG - Importing BlpImagePlugin
+2025-10-28 09:32:01,557 - PIL.Image - DEBUG - Importing BmpImagePlugin
+2025-10-28 09:32:01,557 - PIL.Image - DEBUG - Importing BufrStubImagePlugin
+2025-10-28 09:32:01,557 - PIL.Image - DEBUG - Importing CurImagePlugin
+2025-10-28 09:32:01,557 - PIL.Image - DEBUG - Importing DcxImagePlugin
+2025-10-28 09:32:01,558 - PIL.Image - DEBUG - Importing DdsImagePlugin
+2025-10-28 09:32:01,563 - PIL.Image - DEBUG - Importing EpsImagePlugin
+2025-10-28 09:32:01,564 - PIL.Image - DEBUG - Importing FitsImagePlugin
+2025-10-28 09:32:01,564 - PIL.Image - DEBUG - Importing FliImagePlugin
+2025-10-28 09:32:01,565 - PIL.Image - DEBUG - Importing FpxImagePlugin
+2025-10-28 09:32:01,566 - PIL.Image - DEBUG - Importing FtexImagePlugin
+2025-10-28 09:32:01,567 - PIL.Image - DEBUG - Importing GbrImagePlugin
+2025-10-28 09:32:01,567 - PIL.Image - DEBUG - Importing GifImagePlugin
+2025-10-28 09:32:01,567 - PIL.Image - DEBUG - Importing GribStubImagePlugin
+2025-10-28 09:32:01,567 - PIL.Image - DEBUG - Importing Hdf5StubImagePlugin
+2025-10-28 09:32:01,567 - PIL.Image - DEBUG - Importing IcnsImagePlugin
+2025-10-28 09:32:01,568 - PIL.Image - DEBUG - Importing IcoImagePlugin
+2025-10-28 09:32:01,569 - PIL.Image - DEBUG - Importing ImImagePlugin
+2025-10-28 09:32:01,570 - PIL.Image - DEBUG - Importing ImtImagePlugin
+2025-10-28 09:32:01,570 - PIL.Image - DEBUG - Importing IptcImagePlugin
+2025-10-28 09:32:01,570 - PIL.Image - DEBUG - Importing JpegImagePlugin
+2025-10-28 09:32:01,570 - PIL.Image - DEBUG - Importing Jpeg2KImagePlugin
+2025-10-28 09:32:01,570 - PIL.Image - DEBUG - Importing McIdasImagePlugin
+2025-10-28 09:32:01,571 - PIL.Image - DEBUG - Importing MicImagePlugin
+2025-10-28 09:32:01,579 - PIL.Image - DEBUG - Importing MpegImagePlugin
+2025-10-28 09:32:01,580 - PIL.Image - DEBUG - Importing MpoImagePlugin
+2025-10-28 09:32:01,580 - PIL.Image - DEBUG - Importing MspImagePlugin
+2025-10-28 09:32:01,580 - PIL.Image - DEBUG - Importing PalmImagePlugin
+2025-10-28 09:32:01,581 - PIL.Image - DEBUG - Importing PcdImagePlugin
+2025-10-28 09:32:01,581 - PIL.Image - DEBUG - Importing PcxImagePlugin
+2025-10-28 09:32:01,581 - PIL.Image - DEBUG - Importing PdfImagePlugin
+2025-10-28 09:32:01,587 - PIL.Image - DEBUG - Importing PixarImagePlugin
+2025-10-28 09:32:01,587 - PIL.Image - DEBUG - Importing PngImagePlugin
+2025-10-28 09:32:01,587 - PIL.Image - DEBUG - Importing PpmImagePlugin
+2025-10-28 09:32:01,588 - PIL.Image - DEBUG - Importing PsdImagePlugin
+2025-10-28 09:32:01,588 - PIL.Image - DEBUG - Importing QoiImagePlugin
+2025-10-28 09:32:01,588 - PIL.Image - DEBUG - Importing SgiImagePlugin
+2025-10-28 09:32:01,589 - PIL.Image - DEBUG - Importing SpiderImagePlugin
+2025-10-28 09:32:01,589 - PIL.Image - DEBUG - Importing SunImagePlugin
+2025-10-28 09:32:01,589 - PIL.Image - DEBUG - Importing TgaImagePlugin
+2025-10-28 09:32:01,589 - PIL.Image - DEBUG - Importing TiffImagePlugin
+2025-10-28 09:32:01,589 - PIL.Image - DEBUG - Importing WebPImagePlugin
+2025-10-28 09:32:01,590 - PIL.Image - DEBUG - Importing WmfImagePlugin
+2025-10-28 09:32:01,591 - PIL.Image - DEBUG - Importing XbmImagePlugin
+2025-10-28 09:32:01,592 - PIL.Image - DEBUG - Importing XpmImagePlugin
+2025-10-28 09:32:01,592 - PIL.Image - DEBUG - Importing XVThumbImagePlugin
+2025-10-28 09:32:19,735 - pyrogram.dispatcher - ERROR - 'Message' object has no attribute 'message_id'
+Traceback (most recent call last):
+  File "/home/runner/workspace/.pythonlibs/lib/python3.12/site-packages/pyrogram/dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "/home/runner/workspace/plugins/cb_buttons.py", line 124, in button
+    await youtube_dl_call_back(bot, update)
+  File "/home/runner/workspace/plugins/youtube_dl_button.py", line 103, in youtube_dl_call_back
+    message_id=update.message.message_id
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Message' object has no attribute 'message_id'
